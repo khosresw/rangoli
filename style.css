@@ -1,0 +1,97 @@
+body {
+  background: #fdf6e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.canvas {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #fff;
+  border: 4px dashed #8b5e3c;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* Central Core */
+.core {
+  position: absolute;
+  top: 185px;
+  left: 185px;
+  width: 30px;
+  height: 30px;
+  background: gold;
+  border-radius: 50%;
+}
+
+/* Corner Squares */
+.corner {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+.square {
+  width: 30px;
+  height: 30px;
+  background: blue;
+  position: absolute;
+}
+
+/* Diamond Shapes */
+.diamond {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: gold;
+  transform: rotate(45deg);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* Positioning Corners */
+.top-left    { top: 40px; left: 40px; }
+.top-right   { top: 40px; left: 330px; }
+.bottom-right{ top: 330px; left: 330px; }
+.bottom-left { top: 330px; left: 40px; }
+
+/* Positioning Diamonds */
+.diamond.tl { top: -20px; left: -20px; }
+.diamond.tr { top: -20px; left: 30px; }
+.diamond.br { top: 30px; left: 30px; }
+.diamond.bl { top: 30px; left: -20px; }
+
+/* Quarter Circles */
+.quarter {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: green;
+  border-radius: 0 60px 0 0;
+  transform-origin: center;
+}
+.north { top: 20px; left: 170px; transform: rotate(0deg); }
+.east  { top: 170px; left: 320px; transform: rotate(90deg); }
+.south { top: 320px; left: 170px; transform: rotate(180deg); }
+.west  { top: 170px; left: 20px; transform: rotate(270deg); }
+
+.hidden {
+  display: none;
+}
+
+/* Ritual Button */
+#activate {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #8b5e3c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#activate:hover {
+  background: #a06a45;
+}
